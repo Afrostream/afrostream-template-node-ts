@@ -1,0 +1,39 @@
+{
+  "name": "afrostream-template-node-ts",
+  "version": "1.0.0",
+  "description": "Template de module nodejs fait avec typescript",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev": "echo 'requiring node v6.2.2' && . ~/.nvm/nvm.sh && nvm use 6.2.2 && node_modules/.bin/nodemon dist/index.js",
+    "start": "node dist/index.js",
+    "compile": "node_modules/.bin/tsc",
+    "compile:watch": "node_modules/.bin/tsc -w",
+    "lint": "find src -name '*.ts' | xargs -n 1 node_modules/.bin/tslint -c tslint.json ",
+    "clean": "rimraf dist/*",
+    "test": "npm run clean && npm run compile && npm run lint && . ~/.nvm/nvm.sh && nvm use 4.4.5 && node_modules/.bin/mocha -b test/integration/",
+    "prepublish": "npm run clean && npm run compile -- --declaration"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.2",
+    "tslint": "^3.11.0",
+    "typescript": "^1.8.10",
+    "nodemon": "^1.9.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Afrostream/afrostream-template-node-ts.git"
+  },
+  "engines": {
+    "node": "6.2.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Afrostream/afrostream-template-node-ts/issues"
+  },
+  "homepage": "https://github.com/Afrostream/afrostream-template-node-ts#readme",
+  "typings": "./typings/index.d.ts",
+  "private": true
+}
