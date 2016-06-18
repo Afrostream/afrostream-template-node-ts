@@ -1,11 +1,12 @@
 "use strict";
 
-class Dog {
-  private i: number;
+// different style d'imports...
+import { Dog } from "./dog";
+import * as Cat from "./cat";
+import * as Horse from "./horse";
 
-  constructor(i: number) {
-    this.i = i;
-  }
-}
-
-export default Dog;
+export = {
+  Dog: Dog,
+  Cat: Cat,
+  Horse: Horse
+};
