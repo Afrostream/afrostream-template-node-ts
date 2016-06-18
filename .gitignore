@@ -2,7 +2,5 @@
 .idea
 # node
 /node_modules
-# typescript
-/dist
 # npm
 npm-debug.log
